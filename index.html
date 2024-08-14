@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperScissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+    <header><p>Rock Paper Scissors</p><button class="instructions">Instructions</button></header>
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Game Instructions</h5>
+              <button class="close">
+                <span>×</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Click 'Get Started' button.</li>
+                <li>Choose between Rock, Paper or Scissors by clicking in the icon.</li>
+                <li><img src="./images/icon-rock.svg" width="14px">&nbsp;Rock beats Scissors.</li>
+                <li><img src="./images/icon-scissors.svg" width="14px">&nbsp;Scissors beats Paper.</li>
+                <li><img src="./images/icon-paper.svg" width="14px">&nbsp;Paper beats Rock.</li>
+                <li>First player to win 5 rounds is the winner.</li>
+                <li>Play again!</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button class="close">Close</button>
+            </div>
+          </div>
+    </div>
+   <div class="temp">
+
+     <!-- Get Start -->
+     <h1>WELCOME TO ROCK PAPER SCISSORS GAME!</h1>
+     <button class="GetStart">Get Start</button>
+     <!-- One player or Tow player -->
+     <div class="wrapper">
+       <button class="left">One Player</button>
+       <button class="right">Tow Player</button>
+     </div>
+     <!-- One player Mode -->
+     <div class="OnePlayerMode">
+          <h2 class="result"></h2>
+          <h2 class="playerName">Player</h2>
+          <h2 class="computerName">Computer</h2>
+          <div class="player"></div>
+          <div class="computer"></div>
+          <div class="shapes">
+              <button class="rock"><img src="./images/icon-rock.svg" width="54px"></button>
+              <button class="scissors"><img src="./images/icon-scissors.svg" width="54px"></button>
+              <button class="paper"><img src="./images/icon-paper.svg" width="54px"></button>
+          </div>
+     </div>
+   </div>
+   <div class="timerModal"></div>
+   
+    <script src="main.js"></script>
+</body>
+</html>
+

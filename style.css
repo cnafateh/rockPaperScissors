@@ -1,0 +1,276 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --FirstColor : rgb(47, 43, 43);
+}
+ul{
+    list-style: none;
+}
+/* ------------------------------------------- */
+/* Header */
+header{
+    padding: 10px;
+    background-color: var(--FirstColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+}
+header > p{
+    font-size: 22px;
+    font-family: inherit;
+    color: inherit;
+}
+header > button{
+    padding: 8px;
+    background-color: inherit;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+header > button:hover{
+    background-color: rgb(68, 63, 63);
+}
+/* ------------------------------------------- */
+/* Modal */
+.modal{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content{
+    height: 450px;
+    width: 400px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    padding: 8px;
+}
+
+.modal-content > *{
+    padding: 8px;
+    width: 100%;
+}
+
+.modal-header{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 100;
+}
+.modal-header h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-header button{
+    cursor: pointer;
+    padding: 4px;
+    border: none;
+    background-color: white;
+    border-radius: 4px;
+}
+.modal-header button:hover{
+    background-color: rgb(213, 209, 209);
+}
+.modal-header button span{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(128, 128, 128, 0.5);
+}
+.modal-body{
+    background-color: rgb(182, 182, 182);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.modal-body  li{
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+    font-size: 14px;
+    font-family: sans-serif;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.modal-body  li:last-child{
+    border: none;
+}
+.modal-footer{
+    border-top: 1px solid rgba(128, 128, 128, 0.5);
+    display: flex;
+    flex-direction: row-reverse;
+}
+.modal-footer > button{
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    border: none;
+    color: white;
+    background-color: var(--FirstColor);
+    cursor: pointer;
+}
+.modal-footer > button:hover{
+    background-color: rgb(68, 63, 63);
+}
+/* ------------------------------------------- */
+/* Temp Element */
+.temp{
+    position: relative;
+}
+/* ------------------------------------------- */
+/* Get Start */
+h1{
+    padding: 20px;
+    font-size: 36px;
+    text-align: center;
+    font-family: sans-serif;
+    color: var(--FirstColor);
+    /* display: none */
+}
+.GetStart{
+    display: block;
+    padding: 16px 20px;
+    margin: 20px auto;
+    border-radius: 4px;
+    background-color: var(--FirstColor);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    /* display: none */
+}
+/* ------------------------------------------- */
+/* One player or Tow player */
+.wrapper{
+    width: 55%;
+    height: 350px;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin: 60px auto;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.wrapper > *{
+    width: 35%;
+    height: 250px;
+    background-color: var(--FirstColor);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+    font-size: 26px;
+}
+.wrapper > *:hover{
+    background-color: rgba(47, 43, 43, 0.9);
+    color: rgb(191, 191, 191);
+}
+/* ------------------------------------------- */
+/* One player Mode */
+.OnePlayerMode{
+    margin: 50px auto;
+    width: 80%;
+    height: 450px;
+    border-radius: 6px;
+    background-color: rgba(128, 128, 128, 0.35);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr  1fr 1fr;
+    grid-template-areas: 'result result'
+                         'playerName computerName'
+                         'pScore cScore'
+                         'shapes shapes';
+    display: none;    
+}
+
+.OnePlayerMode > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    grid-area: result;
+}
+.playerName{
+    grid-area: playerName;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+.computerName{
+    grid-area: computerName;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+.player{
+    grid-area: pScore;
+    display: flex;
+    flex-direction: column;
+}
+.computer{
+    grid-area: cScore;
+    display: flex;
+    flex-direction: column;
+}
+.shapes{
+    grid-area: shapes;
+    justify-content: space-evenly;
+}
+.shapes button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    filter: grayscale();
+}
+.shapes button:hover{
+    filter: grayscale() opacity(70%);
+    padding: 6px;
+}
+
+/* timer */
+.timerModal{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 208px;
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: none;
+}
